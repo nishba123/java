@@ -1,0 +1,26 @@
+ import java.util.Scanner;
+   class Digits{
+       int num;
+       Digits(int n){
+           num=n;
+       }
+       int getDigits(){
+           int s=0;
+          int temp=num;
+          while(temp!=0){
+              s+=temp%10;
+              temp/=10;
+          }
+          return s;
+ 
+      }
+  }
+  class SMain{
+      public static void main(String[]args){
+          Scanner sc=new Scanner(System.in);
+          System.out.print("enter a number:");
+          int n=sc.nextInt();
+          Digits obj=new Digits(n);
+          System.out.println("sum of digits:" + obj.getDigits());
+      }
+  }

@@ -1,0 +1,28 @@
+ import java.util.Scanner;
+  class Armstrong{
+       int n, sum=0,temp,r;
+       void getData(){
+           Scanner sc = new Scanner(System.in);
+           System.out.print("enter a number:");
+          n=sc.nextInt();
+           temp=n;
+       }
+      void checkArmstrong(){
+          while(temp !=0){
+              r=temp%10;
+              sum=sum+(r*r*r);
+             temp=temp/10;
+          }
+          if(sum==n)
+              System.out.println("Armstrong number:");
+          else
+              System.out.println("Not armstrong number");
+      }}
+  class RMain{
+      public static void main(String[]args){
+          Armstrong obj = new Armstrong();
+          obj.getData();
+          obj.checkArmstrong();
+      }
+  }
+

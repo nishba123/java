@@ -1,0 +1,26 @@
+ import java.util.Scanner;
+   class Reverse{
+       int n, rev =0;
+    	void getData(){
+           Scanner sc = new Scanner(System.in);
+           System.out.print("enetr a number:");
+           n=sc.nextInt();
+       }
+       void findReverse(){
+          while(n !=0){
+              rev = rev * 10 + n % 10;
+              n=n/10;
+          }
+          System.out.println("Reversed number = " + rev);
+      }
+  }
+  class RMain{
+      public static void main(String[]args){
+          Reverse obj = new Reverse();
+          obj.getData();
+          obj.findReverse();
+ 
+ 
+     }
+  }
+

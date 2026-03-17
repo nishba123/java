@@ -1,0 +1,29 @@
+ import java.util.Scanner;
+   class Fibonacci{
+       int n;
+       void getData(){
+           Scanner sc = new Scanner(System.in);
+           System.out.print("enter a number:");
+           n=sc.nextInt();
+       }
+       void printSeries(){
+          int a=0,b=1,c;
+ 
+ 
+                  System.out.println("fibonacci series:");
+                  while(a<=n){
+                      System.out.print(a+ " ");
+                       c=a+b;
+                       a=b;
+                       b=c;
+          }
+ 
+      }
+  }
+  class FMain{
+      public static void main(String[]args){
+          Fibonacci obj = new Fibonacci();
+          obj.getData();
+          obj.printSeries();
+      }}
+

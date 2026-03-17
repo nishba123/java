@@ -1,0 +1,28 @@
+ import java.util.Scanner;
+   class Rectangle{
+     int side,breadth;
+       void getData(){
+           Scanner sc = new Scanner(System.in);
+           System.out.print("enter side of square:");
+          side = sc.nextInt();
+           System.out.print("enter breadth of rectangle:");
+           breadth = sc.nextInt();
+      }
+      int getArea(){
+          return side * side;
+ 
+      }
+      int getPerimeter(){
+          int area = getArea();
+          int length = area/breadth;
+          return 2 * (length + breadth);}}
+  class RectMain{
+      public static void main(String[]args){
+         Rectangle obj = new Rectangle();
+          obj.getData();
+          int area = obj.getArea();
+          int perimeter = obj.getPerimeter();
+          System.out.println("Area of rectangle = " + area);
+          System.out.println("perimeter of rectangle = " + perimeter);
+      }}
+ 
