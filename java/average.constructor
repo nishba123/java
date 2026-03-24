@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class Average{
+    int num1,num2,num3;
+    double avg;
+    Average(int a,int b,int c){
+        num1 = a;
+        num2 = b;
+        num3 = c;
+    }
+    void calculateAverage(){
+        avg=(num1 + num2 + num3)/3.0;
+    }
+    void display(){
+        System.out.println("Average = " + avg);
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter first number:");
+        int a = sc.nextInt();
+        System.out.print("enter second number:");
+        int b = sc.nextInt();
+        System.out.print("enter third number:");
+        int c = sc.nextInt();
+        Average obj = new Average(a,b,c);
+        obj.calculateAverage();
+        obj.display();
+    }
+}
