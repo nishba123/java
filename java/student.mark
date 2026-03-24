@@ -1,0 +1,47 @@
+class student{
+    int rollno;
+    String name;
+    int sub1,sub2;
+
+    student(){
+        rollno = 0;
+        name="";
+        sub1=0;
+        sub2=0;
+    }
+    student(int r,String n,int s1,int s2){
+        rollno=r;
+        name=n;
+        sub1=s1;
+        sub2=s2;
+    }
+    void display(){
+        System.out.println("Rollno: "+rollno);
+        System.out.println("Name: "+name);
+        System.out.println("Mark1: "+sub1);
+        System.out.println("Mark2: "+sub2);
+    }
+    public static void main(String[]args){
+
+        student s1=new student();
+        s1.rollno=1;
+        s1.name="Rahul";
+        s1.sub1=80;
+        s1.sub2=70;
+
+        student s2 = new student(2,"Anu",90,85);
+        student s3= new student(3,"Arjun",75,95);
+
+        System.out.println("STUDENT DETAILS\n");
+        s1.display();
+        System.out.println("");
+        s2.display();
+        System.out.println("\n");
+        s3.display();
+
+        double avg1=(s1.sub1+s2.sub1+s3.sub1)/3.0;
+        double avg2=(s1.sub2+s2.sub2+s3.sub2)/3.0;
+        System.out.println("\nAverage sub1= "+avg1);
+        System.out.println("Average sub2= "+avg2);
+    }
+}
